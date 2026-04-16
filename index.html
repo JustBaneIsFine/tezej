@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TEZEJ</title>
+  
+  <!-- Exo Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100..600&display=swap" rel="stylesheet">
+  
+  <!-- PicoCSS -->
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  
+  <!-- Font Awesome (latest version for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+  html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Exo', sans-serif;
+  color: #fff;
+  position: relative;
+  background: #000; /* fallback background */
+}
+
+/* Background image with overlay */
+body {
+  background: url("TEZEJ tekst.png") no-repeat center center;
+  background-size: contain;   /* fills screen more naturally */
+  background-color: #000;
+  background-attachment: fixed;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 0;
+}
+
+/* Centered container */
+.container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  overflow: hidden; /* keep content contained */
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.8rem;
+}
+
+p {
+  margin: 0.5rem 0;
+  max-width: 500px;
+  font-weight: 200;
+}
+
+/* Divider lines */
+hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  width: 40%;
+  margin: 0.5rem auto;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #ff4081;
+  border-color: #ff4081;
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+  h1 { font-size: 1.5rem; letter-spacing: 0.4rem; }
+  p { font-size: 0.9rem; }
+}
+@media (max-width: 480px) {
+  h1 { font-size: 2rem; letter-spacing: 0.2rem; }
+  p { font-size: 1.5rem; }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 data-aos="fade-right" data-aos-duration="1000">TEZEJ</h1>
+    
+    
+    <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">From clubs and private parties to open-air events.<br>
+       Adapting to any crowd and situation.</p>
+    
+    <hr data-aos="zoom-in" data-aos-duration="2000">
+    
+    <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">Based in Novi Sad<br>Contact below</p>
+    
+    <div class="social-icons" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">
+      <a href="https://instagram.com/dj_tezej" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtDnGThghdWKDRttFTfFTsPTnGTHKrKhvfpxwVNfcnMwNdcjDkbvqRprNXwcZsVZjmnFBlPV" alt="djtezej@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+  
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
