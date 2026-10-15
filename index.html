@@ -5,12 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>TEZEJ</title>
+  <meta name="description" content="TEZEJ, DJ based in Novi Sad. Clubs, private parties and open-air events. Also builds apps for DJs.">
+  <meta property="og:title" content="TEZEJ">
+  <meta property="og:description" content="DJ based in Novi Sad. Also builds apps for DJs, like DJ Track Organizer.">
+  <meta property="og:image" content="https://djtezej.com/TEZEJ%20tekst.png">
+  <meta property="og:url" content="https://djtezej.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="TEZEJ%20tekst.png">
   
   <!-- Exo Font -->
   <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100..600&display=swap" rel="stylesheet">
   
   <!-- PicoCSS -->
-  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@2.0.6/css/pico.min.css">
   
   <!-- AOS CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -105,6 +112,83 @@ hr {
   border-color: #ff4081;
 }
 
+.scroll-hint {
+  margin-top: 3rem;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.85rem;
+  font-weight: 200;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+}
+.scroll-hint:hover { color: #ff4081; }
+.scroll-hint i { margin-top: 0.5rem; animation: bob 2s ease-in-out infinite; }
+@keyframes bob { 50% { transform: translateY(6px); } }
+
+.apps {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 1rem 6rem;
+  text-align: center;
+}
+.apps .tag {
+  max-width: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.5rem;
+  color: rgba(255,255,255,0.5);
+}
+.apps-intro { margin: 0 auto 2.5rem; }
+.apps h2, .apps h3 { color: #fff; font-weight: 400; margin: 0 0 0.6rem; }
+.apps h2 { font-size: 1.5rem; }
+.apps h3 { font-size: 1.1rem; }
+
+.showcase {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.showcase video {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: #111;
+}
+.showcase-text p { max-width: none; color: rgba(255,255,255,0.8); }
+.buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
+.btn {
+  border: 1px solid #fff;
+  border-radius: 999px;
+  padding: 0.55rem 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.btn:not(.ghost) { background: #fff; color: #000; }
+.btn:hover { border-color: #ff4081; color: #ff4081; background: transparent; }
+
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.card {
+  display: block;
+  text-align: left;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 1.25rem;
+  color: #fff;
+  text-decoration: none;
+  transition: border-color 0.3s ease;
+}
+.card:hover { border-color: #ff4081; }
+.card p { max-width: none; margin: 0; color: rgba(255,255,255,0.7); font-size: 0.95rem; }
+
+@media (max-width: 768px) {
+  .showcase, .cards { grid-template-columns: 1fr; }
+}
+
 /* Responsive font sizes */
 @media (max-width: 768px) {
   h1 { font-size: 1.5rem; letter-spacing: 0.4rem; }
@@ -115,6 +199,9 @@ hr {
   p { font-size: 1.5rem; }
 }
 
+@media (max-width: 480px) {
+  .apps p { font-size: 1rem; }
+}
   </style>
 </head>
 <body>
@@ -128,17 +215,61 @@ hr {
     <hr data-aos="zoom-in" data-aos-duration="2000">
     
     <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">Based in Novi Sad<br>Contact below</p>
-    
+
     <div class="social-icons" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">
-      <a href="https://instagram.com/dj_tezej" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="mailto:djtezej@gmail.com" alt="djtezej@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://instagram.com/dj_tezej" target="_blank" rel="noopener" aria-label="Instagram"><i aria-hidden="true" class="fab fa-instagram"></i></a>
+      <a href="mailto:djtezej@gmail.com" aria-label="Email djtezej@gmail.com"><i aria-hidden="true" class="fas fa-envelope"></i></a>
+      <a href="https://github.com/JustBaneIsFine" target="_blank" rel="noopener" aria-label="GitHub"><i aria-hidden="true" class="fab fa-github"></i></a>
     </div>
+
+    <a class="scroll-hint" href="#apps" data-aos="fade-up" data-aos-delay="1000">I also build apps for DJs<br><i aria-hidden="true" class="fas fa-chevron-down"></i></a>
   </div>
-  
+
+  <section id="apps" class="apps">
+    <p class="tag" data-aos="fade-up">TOOLS FOR DJS</p>
+    <p class="apps-intro" data-aos="fade-up">Small apps that fix the tedious parts of DJing.</p>
+
+    <div class="showcase" data-aos="fade-up">
+      <video src="assets/track-organizer-promo.mp4" poster="assets/track-organizer.png" autoplay muted loop playsinline controls preload="metadata"></video>
+      <div class="showcase-text">
+        <h2>DJ Track Organizer</h2>
+        <p>Tracks the SoundCloud artists you follow and which of their releases you've actually heard. Mark tracks as heard, for later, or owned. Give artists notes like "warmup" or "hard techno", search by them, and update only the artists under one note. Runs on your machine, no account.</p>
+        <div class="buttons">
+          <a class="btn" href="https://github.com/JustBaneIsFine/dj-track-organizer/releases/latest/download/DJOrganizer_windows.zip"><i aria-hidden="true" class="fab fa-windows"></i> Windows</a>
+          <a class="btn" href="https://github.com/JustBaneIsFine/dj-track-organizer/releases/latest/download/DJOrganizer_mac_apple-silicon.zip"><i aria-hidden="true" class="fab fa-apple"></i> macOS (Apple Silicon)</a>
+          <a class="btn ghost" href="https://github.com/JustBaneIsFine/dj-track-organizer" target="_blank" rel="noopener">Source</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <a class="card" href="https://github.com/JustBaneIsFine/copyright-checker" target="_blank" rel="noopener" data-aos="fade-up">
+        <h3>DJ Copyright Prep</h3>
+        <p>Merges a folder of songs into one small upload so YouTube's Content ID flags tracks before you post a mix.</p>
+      </a>
+      <a class="card" id="issue-link" href="mailto:djtezej@gmail.com?subject=DJ%20workflow%20issue" data-aos="fade-up" data-aos-delay="150">
+        <h3>Custom work</h3>
+        <p>Got a workflow problem that eats your evenings? Send it over.</p>
+      </a>
+    </div>
+  </section>
+
   <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+
+    // Desktop: Gmail compose in a new tab. Phones keep mailto, which opens the mail app.
+    if (!matchMedia('(pointer: coarse)').matches) {
+      const body = "What I'm trying to do:\n\n\nWhat gets in the way:\n\n\nSoftware I use (DJ app, OS):\n";
+      const link = document.getElementById('issue-link');
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.href =
+        'https://mail.google.com/mail/?view=cm&fs=1&to=djtezej@gmail.com' +
+        '&su=' + encodeURIComponent('DJ workflow issue') +
+        '&body=' + encodeURIComponent(body);
+    }
   </script>
 </body>
 </html>
