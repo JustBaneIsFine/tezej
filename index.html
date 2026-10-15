@@ -169,6 +169,7 @@ hr {
   transition: color 0.3s ease, border-color 0.3s ease;
 }
 .btn:not(.ghost) { background: #fff; color: #000; }
+.btn.small { padding: 0.4rem 0.9rem; font-size: 0.8rem; }
 .btn:hover { border-color: #ff4081; color: #ff4081; background: transparent; }
 
 .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
@@ -243,10 +244,15 @@ hr {
     </div>
 
     <div class="cards">
-      <a class="card" href="https://github.com/JustBaneIsFine/copyright-checker" target="_blank" rel="noopener" data-aos="fade-up">
+      <div class="card" data-aos="fade-up">
         <h3>DJ Copyright Prep</h3>
         <p>Merges a folder of songs into one small upload so YouTube's Content ID flags tracks before you post a mix.</p>
-      </a>
+        <div class="buttons">
+          <a class="btn small" href="https://github.com/JustBaneIsFine/copyright-checker/releases/latest/download/DJCopyrightPrep_windows.zip"><i aria-hidden="true" class="fab fa-windows"></i> Windows</a>
+          <a class="btn small" href="https://github.com/JustBaneIsFine/copyright-checker/releases/latest/download/DJCopyrightPrep_mac_apple-silicon.zip"><i aria-hidden="true" class="fab fa-apple"></i> macOS</a>
+          <a class="btn small ghost" href="https://github.com/JustBaneIsFine/copyright-checker" target="_blank" rel="noopener">Source</a>
+        </div>
+      </div>
       <a class="card" id="issue-link" href="mailto:djtezej@gmail.com?subject=DJ%20workflow%20issue" data-aos="fade-up" data-aos-delay="150">
         <h3>Custom work</h3>
         <p>Got a workflow problem that eats your evenings? Send it over.</p>
